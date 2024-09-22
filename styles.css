@@ -1,15 +1,13 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 body {
     font-family: 'Poppins', sans-serif;
     color: #43485c;
-    background: #fff;
+    background: #f4f4f4;
     max-width: 1920px;
     margin: 0 auto;
     display: flex;
@@ -17,66 +15,93 @@ body {
     min-height: 100vh;
 }
 
-
 header {
-    background-color: #cccccc;
+    background-color: #282828;
     text-align: center;
     padding: 20px;
+    color: white;
 }
-
 
 nav {
     background-color: #333;
-    color: white;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+nav li {
+    margin: 0 15px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s, color 0.3s;
 }
 
-
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #0f33ff;
 }
-
 
 main {
     flex-grow: 1;
-    padding: 20px;
-}
-
-
-.sink-info {
+    padding: 40px 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
+.sink-info {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
 
 .sink-item {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid #ddd;
-    background-color: #f9f9f9;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
+.sink-item img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.sink-item h2 {
+    margin: 15px 0;
+}
+
+.sink-item:hover {
+    transform: translateY(-5px);
+}
 
 .sink-item.full-width {
-    grid-column: span 2;
+    grid-column: span 1;
+}
+
+footer {
+    background-color: #282828;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 
-footer {
-    background-color: #cccccc;
-    text-align: center;
-    padding: 20px;
+@media (min-width: 600px) {
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
