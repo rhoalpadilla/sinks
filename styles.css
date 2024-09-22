@@ -1,74 +1,46 @@
-/* General Reset and Box Sizing */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styles */
+
 body {
     font-family: 'Poppins', sans-serif;
     color: #43485c;
     background: #fff;
     max-width: 1920px;
     margin: 0 auto;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Links */
-a {
-    color: #6a708e;
-    text-decoration: none;
-    font-size: 16px;
-}
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    color: #43485c;
-    font-size: 16px;
-    text-transform: capitalize;
-}
-
-/* Paragraphs */
-p {
-    line-height: 1.8;
-    color: #43485c;
-    font-size: 14px;
-}
-
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Header */
 header {
     background-color: #cccccc;
     text-align: center;
     padding: 20px;
 }
 
-/* Navigation */
+
 nav {
-    background-color: #333333;
+    background-color: #333;
     color: white;
-    padding: 15px;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
     justify-content: space-around;
 }
 
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
 }
+
 
 @media (max-width: 600px) {
     nav ul {
@@ -77,11 +49,12 @@ nav ul li a {
     }
 }
 
-/* Main Content */
+
 main {
     flex-grow: 1;
     padding: 20px;
 }
+
 
 .sink-info {
     display: grid;
@@ -89,41 +62,21 @@ main {
     gap: 20px;
 }
 
+
 .sink-item {
     padding: 20px;
     border: 1px solid #ddd;
     background-color: #f9f9f9;
 }
 
+
 .sink-item.full-width {
     grid-column: span 2;
 }
 
-/* Footer */
+
 footer {
     background-color: #cccccc;
     text-align: center;
-    padding: 10px;
-}
-
-/* Button Styles */
-button {
-    background-color: transparent;
-    border: 1px solid #d92cf9;
-    color: #d92cf9;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-button:hover {
-    background-color: #d92cf9;
-    color: white;
-}
-
-/* Media Queries for Small Screens */
-@media (max-width: 600px) {
-    .sink-item.full-width {
-        grid-column: span 1;
-    }
+    padding: 20px;
 }
